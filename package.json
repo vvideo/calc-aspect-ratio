@@ -1,0 +1,38 @@
+{
+  "name": "calc-aspect-ratio",
+  "version": "1.0.0",
+  "description": "Calc aspect ration for display resolutions",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "type": "module",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "test": "tsc --noEmit && jest .",
+    "build": "tsc -p tsconfig.json"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "author": {
+    "name": "Denis Seleznev",
+    "email": "hcodes@yandex.ru",
+    "url": "https://github.com/vvideo/calc-aspect-ratio"
+  },
+  "keywords": [
+    "aspect",
+    "ratio",
+    "ultrawide",
+    "superwide",
+    "screen",
+    "resolution"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.4"
+  }
+}

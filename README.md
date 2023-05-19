@@ -29,7 +29,7 @@ console.log(aspectRatio);
 console.log(calcAspectRation(screen.width, screen.height).value);
 ```
 
-## Examples of aspect ratios
+## Examples
 - Standard aspect ratio: `4:3`
 - Approximate aspect ratio: `≈16:9`
 - Nonstandard aspect ration: `11.99:1`

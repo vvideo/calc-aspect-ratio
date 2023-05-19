@@ -1,11 +1,13 @@
 {
   "name": "calc-aspect-ratio",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Calc aspect ration for display resolutions",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
   "type": "module",
-  "typings": "dist/index.d.ts",
+	"exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+	"engines": {
+		"node": ">=12"
+	},
   "scripts": {
     "clean": "del ./dist/*",
     "test": "tsc --noEmit && jest .",

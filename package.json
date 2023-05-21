@@ -3,11 +3,11 @@
   "version": "1.0.2",
   "description": "Calc aspect ration for display resolutions",
   "type": "module",
-	"exports": "./dist/index.js",
+  "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
-	"engines": {
-		"node": ">=12"
-	},
+  "engines": {
+    "node": ">=12"
+  },
   "scripts": {
     "clean": "del ./dist/*",
     "test": "tsc --noEmit && jest .",

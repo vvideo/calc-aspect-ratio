@@ -9,6 +9,10 @@
   "engines": {
     "node": ">=12"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vvideo/calc-aspect-ratio.git"
+  },
   "scripts": {
     "clean": "del ./dist/*",
     "test": "tsc --noEmit && jest .",

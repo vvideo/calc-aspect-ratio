@@ -1,10 +1,9 @@
 # calc-aspect-ratio
 [![NPM version](https://img.shields.io/npm/v/calc-aspect-ratio.svg?style=flat)](https://www.npmjs.com/package/calc-aspect-ratio)
 [![NPM downloads](https://img.shields.io/npm/dm/calc-aspect-ratio.svg?style=flat)](https://www.npmjs.com/package/calc-aspect-ratio)
-[![bundlephobia](https://badgen.net/bundlephobia/minzip/calc-aspect-ratio)](https://bundlephobia.com/result?p=calc-aspect-ratio)
 [![install size](https://packagephobia.com/badge?p=calc-aspect-ratio)](https://packagephobia.com/result?p=calc-aspect-ratio)
 
-Small package for calculating aspect ratio of display resolution.
+[Small package](https://bundlephobia.com/result?p=calc-aspect-ratio) for calculating aspect ratio of display resolution.
 
 ## Install
 `npm i --save-dev calc-aspect-ratio`

@@ -5,6 +5,8 @@
 
 [Small package](https://bundlephobia.com/result?p=calc-aspect-ratio) for calculating aspect ratio of display resolution.
 
+## [Demo](https://vvideo.github.io/calc-aspect-ratio/example/index.html)
+
 ## Install
 `npm i --save-dev calc-aspect-ratio`
 

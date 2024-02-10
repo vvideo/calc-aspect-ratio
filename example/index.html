@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calc Aspect Ratio</title>
+  <meta charset="utf-8" />
+  <style>
+    html, body {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background: black;
+        color: white;
+    }
+
+    .screen {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+    }
+
+    .screen__title {
+        font-size: 40px;
+        margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+    <div class="screen">
+        <div class="screen__title">Your screen</div>
+        <div class="screen__size">
+            Size: <span class="screen__size-value"></span>
+        </div>
+        <div class="screen__aspect-ratio">
+            Aspect ratio: <span class="screen__aspect-ratio-value"></span>
+        </div>
+    </div>
+    <script type="module">
+        import { calcAspectRatio } from 'https://unpkg.com/calc-aspect-ratio/dist/index.js';
+
+        const screenWidth = window.screen.width;
+        const screenHeight = window.screen.height;
+
+        const sizeElem = document.querySelector('.screen__size-value');
+        const aspectRatioElem = document.querySelector('.screen__aspect-ratio-value');
+
+        function updateText() {
+            sizeElem.innerHTML = `${screenWidth}×${screenHeight}`;
+
+            const aspectRatio = calcAspectRatio(screenWidth, screenHeight)
+            aspectRatioElem.innerHTML = aspectRatio.value;
+        }
+
+        setInterval(updateText, 1000);
+        updateText();
+    </script>
+</body>
+</html>

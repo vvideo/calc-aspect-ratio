@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calc Aspect Ratio</title>
+  <meta charset="utf-8" />
+  <style>
+    html, body {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background: black;
+        color: white;
+    }
+
+    .form {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+    }
+
+    .form__title {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .form__item {
+        margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+    <div class="form">
+        <div class="form__title">Calculate aspect ratio</div>
+        <div class="form__item">
+            Width: <input id="width" type="number" value="1920" size="7" />
+        </div>
+        <div class="form__item">
+            Height: <input id="height" type="number" value="1080" size="7"/>
+        </div>
+        <div class="form__item">
+            Aspect ratio: <span class="form__result-value" id="result"></span>
+        </div>
+    </div>
+    <script type="module">
+        import { calcAspectRatio } from 'https://unpkg.com/calc-aspect-ratio/dist/index.esm.js';
+
+        const widthElem = document.querySelector('#width');
+        const heightElem = document.querySelector('#height');
+        const aspectRatioElem = document.querySelector('#result');
+
+        widthElem.oninput = updateText;
+        heightElem.oninput = updateText;
+
+        function updateText() {
+            const width = Number(widthElem.value);
+            const height = Number(heightElem.value);
+            let result = '-'
+
+            if (width && height) {
+                const aspectRatio = calcAspectRatio(widthElem.value, heightElem.value);
+                result = aspectRatio.value;
+                console.log(aspectRatio);
+            }
+
+            aspectRatioElem.innerHTML = result;
+        }
+
+        updateText();
+    </script>
+</body>
+</html>

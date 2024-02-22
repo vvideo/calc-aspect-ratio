@@ -26,7 +26,8 @@ const resolutions: [string, string, number, number][] = [
     ['4K UHD', '16:9', 3840, 2160],
     ['high-end displays since 2017', '32:9', 5120, 1440],
     ['Advertisement displays', '4:1', 17280, 4320],
-    ['non standard', '142.99:1', 111100, 777],
+    ['non standard 1', '255:8', 10200, 320],
+    ['non standard 2', '33.37:1', 11111, 333],
 ];
 
 describe('Aspect ratio for display resolution', () => {

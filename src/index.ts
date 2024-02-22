@@ -83,8 +83,14 @@ export function calcAspectRatio(
         };
     }
 
-    const x = Math.round(ratio * 100) / 100;
-    const y = 1;
+    const divisor = gcd(width, height);
+    let x = width / divisor;
+    let y = height / divisor;
+
+    if (divisor === 1) {
+        x = Math.round(ratio * 100) / 100;
+        y = 1;
+    }
 
     return {
         x,
@@ -104,4 +110,12 @@ function findElement(elems: number[], value: number, tolerance: number) {
     }
 
     return undefined;
+}
+
+function gcd(a = 0, b = 0) {
+    while (b) {
+        [a, b] = [b, a % b];
+    }
+
+    return a;
 }
